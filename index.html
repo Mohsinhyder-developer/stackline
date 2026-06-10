@@ -3,104 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stackline App - The Ultimate Experience</title>
+    <title>Stackline Tasks</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    
-    <nav class="glass-nav">
+    <!-- Navbar -->
+    <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">
-                <span class="gradient-text">Stackline</span>
-            </a>
+            <div class="brand">
+                <span class="brand-small">STACKLINE</span>
+                <span class="brand-large">Tasks</span>
+            </div>
             <div class="nav-links">
                 <a href="#features">Features</a>
-                <a href="#download" class="nav-cta">Download App</a>
+                <a href="#download" class="btn btn-primary btn-sm">Download App</a>
             </div>
         </div>
     </nav>
 
-    <header class="hero">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container hero-grid">
-            <div class="hero-text">
-                <div class="badge">✨ The Ultimate Experience</div>
-                <h1 class="title">Redefine your <br><span class="gradient-text">workflow.</span></h1>
-                <p class="subtitle">Stackline brings everything you need into one fluid, gorgeous mobile experience. Built for speed, designed for you.</p>
-                
-                <div class="cta-group">
+            <div class="hero-content">
+                <h1>Manage your day with <br><span>Stackline Tasks</span></h1>
+                <p>The ultimate to-do list app designed to help you track daily goals, set priorities, and stay incredibly organized in a beautifully simple interface.</p>
+                <div class="cta-buttons">
                     <a href="app-debug.apk" class="btn btn-primary" download>
-                        <i class="fab fa-android"></i> Get APK Now
+                        <i class="fab fa-android"></i> Download APK
                     </a>
-                    <a href="#features" class="btn btn-outline">
-                        Discover More
-                    </a>
-                </div>
-                <div class="stats-mini">
-                    <div class="stat"><i class="fas fa-star" style="color: #fbbf24;"></i> 4.9/5 Rating</div>
-                    <div class="stat"><i class="fas fa-download" style="color: #38bdf8;"></i> 100K+ Installs</div>
                 </div>
             </div>
-            
+
+            <!-- CSS Replica of their App Interface -->
             <div class="hero-visual">
-                <div class="phone-container">
-                    <div class="phone-frame">
-                        <div class="phone-screen">
-                            <div class="mock-header"></div>
-                            <div class="mock-card"></div>
-                            <div class="mock-card delay-1"></div>
-                            <div class="mock-card delay-2"></div>
+                <div class="app-mockup">
+                    <div class="app-header">
+                        <div class="icon-circle"><i class="fas fa-user"></i></div>
+                        <div class="app-title">
+                            <span class="app-title-top">STACKLINE</span>
+                            <span class="app-title-bot">Tasks</span>
+                        </div>
+                        <div class="icon-plain"><i class="far fa-bell"></i></div>
+                    </div>
+                    
+                    <h2 class="mock-greeting">Hello, David Thomas</h2>
+                    
+                    <div class="daily-goals-card">
+                        <div class="dg-text">
+                            <h3>Daily Goals</h3>
+                            <p>0 of 1 completed</p>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill"></div></div>
+                        </div>
+                        <div class="dg-circle">
+                            <span>0%</span>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </header>
 
-    <section id="features" class="features">
-        <div class="container">
-            <h2 class="section-title">Why <span class="gradient-text">Stackline?</span></h2>
-            <div class="grid">
-                <div class="card glass-card">
-                    <div class="icon-box"><i class="fas fa-bolt"></i></div>
-                    <h3>Blazing Fast</h3>
-                    <p>Optimized architecture ensures that your tasks are completed in milliseconds. Never wait for an app to load again.</p>
-                </div>
-                <div class="card glass-card">
-                    <div class="icon-box"><i class="fas fa-shield-halved"></i></div>
-                    <h3>Ironclad Security</h3>
-                    <p>End-to-end encryption keeps your personal data entirely safe and private. You own your data.</p>
-                </div>
-                <div class="card glass-card">
-                    <div class="icon-box"><i class="fas fa-wand-magic-sparkles"></i></div>
-                    <h3>Stunning UI</h3>
-                    <p>A beautiful interface that adapts to your preferences seamlessly. It looks just as good as it works.</p>
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <span>Search tasks...</span>
+                        <div class="filter-btn"><i class="fas fa-sort-amount-down"></i></div>
+                    </div>
+
+                    <div class="pill-tabs">
+                        <div class="pill active">All</div>
+                        <div class="pill">Pending</div>
+                        <div class="pill">Completed</div>
+                    </div>
+
+                    <div class="pill-tabs categories">
+                        <div class="pillcat active">All Categories</div>
+                        <div class="pillcat">PERSONAL</div>
+                        <div class="pillcat">WORK</div>
+                    </div>
+
+                    <h3 class="section-label">Your Tasks</h3>
+
+                    <div class="task-card">
+                        <div class="task-radio"></div>
+                        <div class="task-info">
+                            <h4>Finish Website Redesign</h4>
+                            <div class="task-tags">
+                                <span class="tag-priority"><span class="dot"></span> HIGH</span>
+                                <span class="tag-category">WORK</span>
+                                <span class="tag-date"><i class="far fa-clock"></i> Jun 10</span>
+                            </div>
+                        </div>
+                        <div class="task-menu"><i class="fas fa-ellipsis-v"></i></div>
+                    </div>
+
+                    <!-- Floating Action Button -->
+                    <div class="fab-btn"><i class="fas fa-plus"></i></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="download" class="download-section">
+    <!-- Features Section -->
+    <section id="features" class="features">
         <div class="container">
-            <div class="download-box glass-card">
-                <h2>Ready to <span class="gradient-text">level up?</span></h2>
-                <p>Download the Stackline APK directly. It's completely free and takes seconds to install.</p>
-                <br>
-                <a href="app-debug.apk" class="btn btn-primary btn-large" download>
-                    <i class="fab fa-android"></i> Download Stackline APK
-                </a>
-                <p class="requirements">Requires Android 8.0+ • 15MB Space</p>
+            <h2 class="sec-title">Everything you need. <br>Nothing you don't.</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="f-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>Daily Goals</h3>
+                    <p>Track your daily completion rate with a satisfying circular progress indicator that keeps you highly motivated.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="f-icon"><i class="fas fa-layer-group"></i></div>
+                    <h3>Smart Categories</h3>
+                    <p>Organize everything into Work, Personal, Shopping, Health, and more. Filter down to exactly what you want to see.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="f-icon"><i class="fas fa-flag"></i></div>
+                    <h3>Priority Levels</h3>
+                    <p>Not all tasks are created equal. Tag tasks as Low, Medium, or High priority so you always tackle what matters most.</p>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download-sec">
+        <div class="container text-center">
+            <h2>Ready to get things done?</h2>
+            <p>Download the free Stackline Tasks APK for Android and transform your productivity today.</p>
+            <br><br>
+            <a href="app-debug.apk" class="btn btn-primary btn-lg" download>
+                <i class="fab fa-android"></i> Download App Now
+            </a>
+            <p class="sys-req">Android 8.0+ • Minimal Storage Required</p>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 Stackline App. Designed with ambition.</p>
+        <p>&copy; 2026 Stackline Tasks. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
