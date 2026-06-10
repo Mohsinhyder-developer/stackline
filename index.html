@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stackline Tasks</title>
+    <title>Stackline</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -11,12 +11,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="bg-pattern"></div>
+    
     <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="brand">
-                <span class="brand-small">STACKLINE</span>
-                <span class="brand-large">Tasks</span>
+                <div class="brand-logo"><i class="fas fa-layer-group"></i></div>
+                <span class="brand-large">Stackline</span>
             </div>
             <div class="nav-links">
                 <a href="#features">Features</a>
@@ -29,75 +31,85 @@
     <section class="hero">
         <div class="container hero-grid">
             <div class="hero-content">
-                <h1>Manage your day with <br><span>Stackline Tasks</span></h1>
+                <div class="pill-badge">✨ Build better habits today</div>
+                <h1>Manage your day with <br><span>Stackline</span></h1>
                 <p>The ultimate to-do list app designed to help you track daily goals, set priorities, and stay incredibly organized in a beautifully simple interface.</p>
                 <div class="cta-buttons">
                     <a href="app-debug.apk" class="btn btn-primary" download>
                         <i class="fab fa-android"></i> Download APK
                     </a>
+                    <div class="rating-strip">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span>Loved by 10k+ users</span>
+                    </div>
                 </div>
             </div>
 
             <!-- CSS Replica of their App Interface -->
             <div class="hero-visual">
                 <div class="app-mockup">
-                    <div class="app-header">
-                        <div class="icon-circle"><i class="fas fa-user"></i></div>
-                        <div class="app-title">
-                            <span class="app-title-top">STACKLINE</span>
-                            <span class="app-title-bot">Tasks</span>
+                    <div class="notch"></div>
+                    <div class="app-inner">
+                        <div class="app-header">
+                            <div class="icon-circle">D</div>
+                            <div class="app-title">
+                                <span class="app-title-top">STACKLINE</span>
+                                <span class="app-title-bot">Tasks</span>
+                            </div>
+                            <div class="icon-plain"><i class="far fa-bell"></i></div>
                         </div>
-                        <div class="icon-plain"><i class="far fa-bell"></i></div>
-                    </div>
-                    
-                    <h2 class="mock-greeting">Hello, David Thomas</h2>
-                    
-                    <div class="daily-goals-card">
-                        <div class="dg-text">
-                            <h3>Daily Goals</h3>
-                            <p>0 of 1 completed</p>
-                            <div class="progress-bar-bg"><div class="progress-bar-fill"></div></div>
-                        </div>
-                        <div class="dg-circle">
-                            <span>0%</span>
-                        </div>
-                    </div>
-
-                    <div class="search-bar">
-                        <i class="fas fa-search"></i>
-                        <span>Search tasks...</span>
-                        <div class="filter-btn"><i class="fas fa-sort-amount-down"></i></div>
-                    </div>
-
-                    <div class="pill-tabs">
-                        <div class="pill active">All</div>
-                        <div class="pill">Pending</div>
-                        <div class="pill">Completed</div>
-                    </div>
-
-                    <div class="pill-tabs categories">
-                        <div class="pillcat active">All Categories</div>
-                        <div class="pillcat">PERSONAL</div>
-                        <div class="pillcat">WORK</div>
-                    </div>
-
-                    <h3 class="section-label">Your Tasks</h3>
-
-                    <div class="task-card">
-                        <div class="task-radio"></div>
-                        <div class="task-info">
-                            <h4>Finish Website Redesign</h4>
-                            <div class="task-tags">
-                                <span class="tag-priority"><span class="dot"></span> HIGH</span>
-                                <span class="tag-category">WORK</span>
-                                <span class="tag-date"><i class="far fa-clock"></i> Jun 10</span>
+                        
+                        <h2 class="mock-greeting">Hello, David Thomas</h2>
+                        
+                        <div class="daily-goals-card">
+                            <div class="dg-text">
+                                <h3>Daily Goals</h3>
+                                <p>0 of 1 completed</p>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill"></div></div>
+                            </div>
+                            <div class="dg-circle">
+                                <span>0%</span>
                             </div>
                         </div>
-                        <div class="task-menu"><i class="fas fa-ellipsis-v"></i></div>
-                    </div>
 
-                    <!-- Floating Action Button -->
-                    <div class="fab-btn"><i class="fas fa-plus"></i></div>
+                        <div class="search-bar">
+                            <i class="fas fa-search"></i>
+                            <span>Search tasks...</span>
+                            <div class="filter-btn"><i class="fas fa-sort-amount-down"></i></div>
+                        </div>
+
+                        <div class="pill-tabs">
+                            <div class="pill active">All</div>
+                            <div class="pill">Pending</div>
+                            <div class="pill">Completed</div>
+                        </div>
+
+                        <div class="pill-tabs categories">
+                            <div class="pillcat active">All Categories</div>
+                            <div class="pillcat">PERSONAL</div>
+                            <div class="pillcat">WORK</div>
+                        </div>
+
+                        <h3 class="section-label">Your Tasks</h3>
+
+                        <div class="task-card">
+                            <div class="task-radio"></div>
+                            <div class="task-info">
+                                <h4>Remove negative habits</h4>
+                                <div class="task-tags">
+                                    <span class="tag-priority"><span class="dot"></span> HIGH</span>
+                                    <span class="tag-category">HEALTH</span>
+                                    <span class="tag-date"><i class="far fa-clock"></i> Jun 10</span>
+                                </div>
+                            </div>
+                            <div class="task-menu"><i class="fas fa-ellipsis-v"></i></div>
+                        </div>
+
+                        <!-- Floating Action Button -->
+                        <div class="fab-btn"><i class="fas fa-plus"></i></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -106,7 +118,9 @@
     <!-- Features Section -->
     <section id="features" class="features">
         <div class="container">
-            <h2 class="sec-title">Everything you need. <br>Nothing you don't.</h2>
+            <div class="sec-heading">
+                <h2 class="sec-title">Everything you need.<br><span>Nothing you don't.</span></h2>
+            </div>
             <div class="feature-grid">
                 <div class="feature-card">
                     <div class="f-icon"><i class="fas fa-bullseye"></i></div>
@@ -129,19 +143,32 @@
 
     <!-- Download Section -->
     <section id="download" class="download-sec">
-        <div class="container text-center">
-            <h2>Ready to get things done?</h2>
-            <p>Download the free Stackline Tasks APK for Android and transform your productivity today.</p>
-            <br><br>
-            <a href="app-debug.apk" class="btn btn-primary btn-lg" download>
-                <i class="fab fa-android"></i> Download App Now
-            </a>
-            <p class="sys-req">Android 8.0+ • Minimal Storage Required</p>
+        <div class="container">
+            <div class="download-box">
+                <h2>Ready to get things done?</h2>
+                <p>Download the free Stackline APK for Android and transform your productivity today.</p>
+                <div class="d-buttons">
+                    <a href="app-debug.apk" class="btn btn-primary btn-lg" download>
+                        <i class="fab fa-android"></i> Download App Now
+                    </a>
+                </div>
+                <p class="sys-req">
+                    <span><i class="fas fa-check-circle"></i> Android 8.0+</span>
+                    <span><i class="fas fa-shield-alt"></i> Safe & Secure</span>
+                    <span><i class="fas fa-bolt"></i> Fast Install</span>
+                </p>
+            </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Stackline Tasks. All rights reserved.</p>
+        <div class="footer-container">
+            <div class="brand">
+                <div class="brand-logo"><i class="fas fa-layer-group"></i></div>
+                <span class="brand-large">Stackline</span>
+            </div>
+            <p>&copy; 2026 Stackline. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
