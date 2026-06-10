@@ -1,80 +1,50 @@
-// Mobile Menu
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
-
-if (hamburger) {
-    hamburger.addEventListener('click', () => {
-        navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+document.addEventListener('DOMContentLoaded', () => {
+    // Reveal animation
+    const cards = document.querySelectorAll('.glass-card');
+    
+    cards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(40px)';
+        card.style.transition = 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
     });
-}
 
-// Smooth scroll for nav links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-            if (navMenu) navMenu.style.display = 'none';
-        }
-    });
-});
-
-// Scroll animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-            observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
-// Observe elements for animation
-document.querySelectorAll('.feature-item, .testimonial').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'all 0.6s ease';
-    observer.observe(el);
-});
-
-// Animate stats on scroll
-const statsSection = document.querySelector('.stats');
-let statsAnimated = false;
-
-if (statsSection) {
-    const statsObserver = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting && !statsAnimated) {
-                statsAnimated = true;
-                document.querySelectorAll('.stat-number').forEach(stat => {
-                    const finalValue = stat.textContent;
-                    const numValue = parseInt(finalValue);
-                    let current = 0;
-                    const increment = Math.ceil(numValue / 50);
-                    
-                    const counter = setInterval(() => {
-                        current += increment;
-                        if (current >= numValue) {
-                            stat.textContent = finalValue;
-                            clearInterval(counter);
-                        } else {
-                            stat.textContent = current + '+';
-                        }
-                    }, 30);
-                });
-                statsObserver.unobserve(statsSection);
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                // Optional: observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.5 });
-    
-    statsObserver.observe(statsSection);
-}
+    }, { threshold: 0.1 });
 
-console.log('✨ Stackline website loaded!');
+    cards.forEach(card => observer.observe(card));
+
+    // Smooth navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId && targetId !== '#') {
+                const targetEl = document.querySelector(targetId);
+                if (targetEl) {
+                    targetEl.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    });
+
+    // Dynamic Blob Movement based on mouse position
+    const blob1 = document.querySelector('.blob-1');
+    const blob2 = document.querySelector('.blob-2');
+    
+    if (blob1 && blob2) {
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            blob1.style.transform = `translate(${x * 50}px, ${y * 50}px)`;
+            blob2.style.transform = `translate(${x * -50}px, ${y * -50}px)`;
+        });
+    }
+});

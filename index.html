@@ -3,217 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stackline - Premium Mobile App</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Stackline App - The Ultimate Experience</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    
+    <nav class="glass-nav">
         <div class="nav-container">
-            <div class="logo">Stackline</div>
-            <div class="nav-menu">
-                <a href="#features" class="nav-link">Features</a>
-                <a href="#download" class="nav-link">Download</a>
-                <a href="#" class="nav-link">Docs</a>
-            </div>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <a href="#" class="logo">
+                <span class="gradient-text">Stackline</span>
+            </a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#download" class="nav-cta">Download App</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <section id="hero" class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-content">
+    <header class="hero">
+        <div class="container hero-grid">
             <div class="hero-text">
-                <h1>Revolutionary Mobile App</h1>
-                <p>Experience the future of productivity with Stackline</p>
-                <a href="#download" class="btn-primary">Get Started</a>
+                <div class="badge">✨ The Ultimate Experience</div>
+                <h1 class="title">Redefine your <br><span class="gradient-text">workflow.</span></h1>
+                <p class="subtitle">Stackline brings everything you need into one fluid, gorgeous mobile experience. Built for speed, designed for you.</p>
+                
+                <div class="cta-group">
+                    <a href="app-debug.apk" class="btn btn-primary" download>
+                        <i class="fab fa-android"></i> Get APK Now
+                    </a>
+                    <a href="#features" class="btn btn-outline">
+                        Discover More
+                    </a>
+                </div>
+                <div class="stats-mini">
+                    <div class="stat"><i class="fas fa-star" style="color: #fbbf24;"></i> 4.9/5 Rating</div>
+                    <div class="stat"><i class="fas fa-download" style="color: #38bdf8;"></i> 100K+ Installs</div>
+                </div>
             </div>
+            
             <div class="hero-visual">
-                <div class="floating-card card-1">
-                    <div class="card-icon"><i class="fas fa-lightning"></i></div>
-                    <div class="card-text">Ultra Fast</div>
-                </div>
-                <div class="floating-card card-2">
-                    <div class="card-icon"><i class="fas fa-shield"></i></div>
-                    <div class="card-text">Secure</div>
-                </div>
-                <div class="floating-card card-3">
-                    <div class="card-icon"><i class="fas fa-check"></i></div>
-                    <div class="card-text">Reliable</div>
+                <div class="phone-container">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="mock-header"></div>
+                            <div class="mock-card"></div>
+                            <div class="mock-card delay-1"></div>
+                            <div class="mock-card delay-2"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- Features -->
     <section id="features" class="features">
-        <h2>Packed with Features</h2>
-        <div class="features-container">
-            <div class="feature-col">
-                <div class="feature-item">
-                    <div class="feature-number">01</div>
-                    <h3>Lightning Speed</h3>
-                    <p>Optimized performance that never slows you down, even with heavy workloads</p>
+        <div class="container">
+            <h2 class="section-title">Why <span class="gradient-text">Stackline?</span></h2>
+            <div class="grid">
+                <div class="card glass-card">
+                    <div class="icon-box"><i class="fas fa-bolt"></i></div>
+                    <h3>Blazing Fast</h3>
+                    <p>Optimized architecture ensures that your tasks are completed in milliseconds. Never wait for an app to load again.</p>
                 </div>
-                <div class="feature-item">
-                    <div class="feature-number">02</div>
-                    <h3>Bank-Level Security</h3>
-                    <p>Your data is encrypted with military-grade encryption standards</p>
+                <div class="card glass-card">
+                    <div class="icon-box"><i class="fas fa-shield-halved"></i></div>
+                    <h3>Ironclad Security</h3>
+                    <p>End-to-end encryption keeps your personal data entirely safe and private. You own your data.</p>
                 </div>
-                <div class="feature-item">
-                    <div class="feature-number">03</div>
-                    <h3>Offline Mode</h3>
-                    <p>Works seamlessly without internet connection</p>
-                </div>
-            </div>
-            <div class="feature-col">
-                <div class="feature-item">
-                    <div class="feature-number">04</div>
-                    <h3>Cloud Sync</h3>
-                    <p>Automatically syncs across all your devices in real-time</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-number">05</div>
-                    <h3>Smart UI</h3>
-                    <p>Intuitive interface that's easy to learn and powerful to use</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-number">06</div>
-                    <h3>24/7 Support</h3>
-                    <p>Dedicated support team ready to help you anytime</p>
+                <div class="card glass-card">
+                    <div class="icon-box"><i class="fas fa-wand-magic-sparkles"></i></div>
+                    <h3>Stunning UI</h3>
+                    <p>A beautiful interface that adapts to your preferences seamlessly. It looks just as good as it works.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Stats -->
-    <section class="stats">
-        <div class="stat">
-            <div class="stat-number">50K+</div>
-            <div class="stat-label">Active Users</div>
-        </div>
-        <div class="stat">
-            <div class="stat-number">4.9★</div>
-            <div class="stat-label">App Rating</div>
-        </div>
-        <div class="stat">
-            <div class="stat-number">150+</div>
-            <div class="stat-label">Countries</div>
-        </div>
-        <div class="stat">
-            <div class="stat-number">99.9%</div>
-            <div class="stat-label">Uptime</div>
-        </div>
-    </section>
-
-    <!-- Download -->
-    <section id="download" class="download">
-        <h2>Download Now</h2>
-        <p class="download-desc">Get Stackline on your device today</p>
-        <div class="download-buttons">
-            <a href="app-debug.apk" class="btn-download android" download>
-                <i class="fab fa-android"></i>
-                <span>Android APK</span>
-            </a>
-            <a href="#" class="btn-download ios disabled">
-                <i class="fab fa-apple"></i>
-                <span>iOS Coming Soon</span>
-            </a>
-        </div>
-        <div class="system-info">
-            <div class="info-item">
-                <i class="fas fa-mobile"></i>
-                <span>Android 8.0+</span>
-            </div>
-            <div class="info-item">
-                <i class="fas fa-database"></i>
-                <span>100MB Storage</span>
-            </div>
-            <div class="info-item">
-                <i class="fas fa-wifi"></i>
-                <span>Internet Optional</span>
+    <section id="download" class="download-section">
+        <div class="container">
+            <div class="download-box glass-card">
+                <h2>Ready to <span class="gradient-text">level up?</span></h2>
+                <p>Download the Stackline APK directly. It's completely free and takes seconds to install.</p>
+                <br>
+                <a href="app-debug.apk" class="btn btn-primary btn-large" download>
+                    <i class="fab fa-android"></i> Download Stackline APK
+                </a>
+                <p class="requirements">Requires Android 8.0+ • 15MB Space</p>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <h2>Loved by Users</h2>
-        <div class="testimonials-grid">
-            <div class="testimonial">
-                <div class="stars">★★★★★</div>
-                <p>"Stackline changed how I work. It's fast, reliable, and just works!"</p>
-                <div class="user-info">
-                    <div class="avatar">JD</div>
-                    <div>
-                        <div class="user-name">John Developer</div>
-                        <div class="user-title">App Developer</div>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial">
-                <div class="stars">★★★★★</div>
-                <p>"The best app I've used. Amazing performance and customer support!"</p>
-                <div class="user-info">
-                    <div class="avatar">SM</div>
-                    <div>
-                        <div class="user-name">Sarah Miller</div>
-                        <div class="user-title">Product Manager</div>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial">
-                <div class="stars">★★★★★</div>
-                <p>"Worth every penny. This is a game-changer for productivity."</p>
-                <div class="user-info">
-                    <div class="avatar">AP</div>
-                    <div>
-                        <div class="user-name">Alex Park</div>
-                        <div class="user-title">Designer</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta-section">
-        <h2>Ready to Transform Your Workflow?</h2>
-        <p>Join thousands of happy users today</p>
-        <a href="#download" class="btn-primary">Download Stackline</a>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Stackline</h4>
-                <p>Premium mobile app for the modern user</p>
-            </div>
-            <div class="footer-section">
-                <h4>Links</h4>
-                <a href="#">Home</a>
-                <a href="#">Features</a>
-                <a href="#">Privacy</a>
-            </div>
-            <div class="footer-section">
-                <h4>Follow</h4>
-                <div class="social">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Stackline. All rights reserved.</p>
-        </div>
+    <footer>
+        <p>© 2026 Stackline App. Designed with ambition.</p>
     </footer>
 
     <script src="script.js"></script>
